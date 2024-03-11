@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editFirstNumber"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Enter first number"
+        android:textSize="60sp"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/editSecondNumber"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Enter second number"
+        android:textSize="60sp"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/editFirstNumber"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/editSecondNumber"
+        android:layout_marginTop="20dp"
+        android:textSize="60sp"
+        android:text="+"
+        android:onClick="plus"/>
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/plusButton"
+        android:layout_marginTop="20dp"
+        android:textSize="60sp"
+        android:text="-"
+        android:onClick="minus"/>
+
+    <Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_toRightOf="@id/plusButton"
+        android:layout_below="@id/editSecondNumber"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="60sp"
+        android:text="*"
+        android:onClick="multiply"/>
+
+    <Button
+        android:id="@+id/divideButton"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="/"
+        android:layout_toRightOf="@id/minusButton"
+        android:layout_below="@id/multiplyButton"
+        android:layout_marginTop="20dp"
+        android:textSize="60sp"
+        android:layout_marginLeft="20dp"
+        android:onClick="divide"/>
+
+    <TextView
+        android:id="@+id/textSeeResult"
+        android:layout_width="600dp"
+        android:layout_height="100dp"
+        android:text=""
+        android:textSize="100sp"
+        android:layout_below="@id/divideButton"
+        android:layout_marginTop="20dp"
+        />
+</RelativeLayout>
